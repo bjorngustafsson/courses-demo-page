@@ -6,6 +6,15 @@ body, html{
     font-family: 'Raleway', sans-serif;
 }
 
+a:focus, a:hover {
+    color: #1c7c39;
+    text-decoration: underline;
+}
+
+a {
+    color: #68b77a;
+}
+
 /* ----------- header ----------------- */
 header {
     background: url("../media/back.jpg") no-repeat center;
@@ -33,28 +42,52 @@ header h1 {
 
 }
 
+.even{
+    width: 100%;
+    background-color: #ffffff;
+}
+
 .left-pane{
     width: 50%;
-    padding: 5rem;
+    padding: 4rem 2rem;
     flex:1;
-    max-width: 800px;
+    max-width: 400px;
 }
 
 .right-pane{
-    padding: 5rem;
+    padding: 4rem 2rem;
     flex:1;
-    max-width: 800px;
+    max-width: 400px;
 }
 
 .flexbox-container{
     display: -webkit-flex;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .courses{
     display: none;
 }
+
+.float-right{
+    float: right;
+}
+
+/* ----------- Course items ----------------- */
+.progress-bar-success {
+    background-color: #91A886;
+}
+
+.course-name{
+    font-weight: 600;
+}
+
+article h2 {
+    margin-top: 0;
+}
+
+
 
 
