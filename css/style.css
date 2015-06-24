@@ -89,5 +89,74 @@ article h2 {
 }
 
 
+/* ----------- Footer and social ----------------- */
+
+.links {
+    font-family: 'Architects Daughter', cursive;
+    text-align: center;
+}
+
+.social {
+   text-align: center;
+    padding-bottom: 2rem;
+    font-size: 4rem;
+    color: #d9d9d9;
+}
+
+.social-list {
+    list-style-type:none;
+}
+
+.social-list li{
+    display: inline;
+    list-style-type: none;
+    padding-right: 100px;
+}
+
+.social .fa-li {
+    left: 0;width: auto;
+}
 
 
+.social .fa-ul {
+ margin-left: 0;
+}
+
+footer{
+    padding-bottom: 3rem;
+}
+
+/* -----------Modal window ----------------- */
+
+.modal-header{
+    background: #F3F2EE;
+}
+
+
+
+/* ----------- Media Queries ----------------- */
+@media screen and (max-width: 700px) {
+
+    .left-pane,
+    .right-pane {
+        min-width: 100%;
+        padding: 0.5rem 2rem;
+    }
+
+    .progress {
+        margin-bottom: 5px;
+    }
+
+    .flexbox-container {
+        padding: 4rem 0px;
+    }
+
+    .fa-2x {
+        font-size: 1em;
+    }
+
+    .social-list li{
+        padding-right: 70px;
+    }
+
+}
