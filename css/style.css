@@ -1,0 +1,60 @@
+body, html{
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+/* ----------- header ----------------- */
+header {
+    background: url("../media/back.jpg") no-repeat center;
+    background-size: cover;
+    height: 300px;
+    width:100%;
+    text-align: center;
+}
+
+header h1 {
+    top: 130px;
+    position: relative;
+    color: white;
+    font-size: 4rem;
+    font-family: 'Architects Daughter', cursive;
+    margin: 0;
+    letter-spacing: 5px;
+
+}
+
+/* ----------- Layout ----------------- */
+.odd{
+    width: 100%;
+    background-color: #F3F2EE;
+
+}
+
+.left-pane{
+    width: 50%;
+    padding: 5rem;
+    flex:1;
+    max-width: 800px;
+}
+
+.right-pane{
+    padding: 5rem;
+    flex:1;
+    max-width: 800px;
+}
+
+.flexbox-container{
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.courses{
+    display: none;
+}
+
+
