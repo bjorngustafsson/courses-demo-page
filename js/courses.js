@@ -1,8 +1,10 @@
-$(document).on('click', '.show-school-courses', function(e){
+$(document).on('click', '.show-school-courses', function(e) {
     bootbox.dialog({
         title: "Universitetskurser",
         message: $('.courses').html(),
-        onEscape: function() { console.log("Escape!"); },
+        onEscape: function() {
+            console.log("Escape!");
+        },
         backdrop: true
     });
 });
@@ -24,17 +26,17 @@ $(document).ready(function() {
 });
 
 //Function to the css rule
-function checkSize(){
+function checkSize() {
 
     //use that min-width is changed on media query
-    if ($(".left-pane").css("min-width") == "100%" ){
+    if ($(".left-pane").css("min-width") == "100%") {
         $(".even .right-pane").moveUp();
 
         $('.fa-li').removeClass('fa-2x');
     }
 
     //reversed when making window larger
-    if ($(".left-pane").css("min-width") != "100%" ){
+    if ($(".left-pane").css("min-width") != "100%") {
         $(".even .right-pane").moveDown();
 
         $('.fa-li').addClass('fa-2x');
@@ -57,8 +59,8 @@ $.fn.moveDown = function() {
 
 /*--------------- END ------------- */
 
-function fadeBlocksIn(){
-    $('.fadeInBlock').each( function(i){
+function fadeBlocksIn() {
+    $('.fadeInBlock').each(function(i) {
 
         var bottom_of_object = $(this).position().top + $(this).outerHeight();
         var bottom_of_window = $(window).scrollTop() + $(window).height();
@@ -66,9 +68,11 @@ function fadeBlocksIn(){
         /* Adjust the "200" to either have a delay or that the content starts fading a bit before you reach it  */
         bottom_of_window = bottom_of_window + 250;
 
-        if( bottom_of_window > bottom_of_object ){
+        if (bottom_of_window > bottom_of_object) {
 
-            $(this).animate({'opacity':'1'},900);
+            $(this).animate({
+                'opacity': '1'
+            }, 900);
 
         }
     });
