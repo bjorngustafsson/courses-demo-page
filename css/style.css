@@ -7,12 +7,12 @@ body, html{
 }
 
 a:focus, a:hover {
-    color: #1c7c39;
+    color: rgb(16, 65, 106);
     text-decoration: underline;
 }
 
 a {
-    color: #68b77a;
+    color: rgb(31, 126, 197);
 }
 
 /* ----------- header ----------------- */
@@ -22,13 +22,19 @@ header {
     height: 300px;
     width:100%;
     text-align: center;
+
+    display: -webkit-flex;
+    display:         flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
 }
 
 header h1 {
-    top: 130px;
     position: relative;
     color: white;
-    font-size: 4rem;
+    font-size: 5em;
     font-family: 'Architects Daughter', cursive;
     margin: 0;
     letter-spacing: 5px;
@@ -44,7 +50,7 @@ header h1 {
 
 .even{
     width: 100%;
-    background-color: #ffffff;
+    background-color: #e0e0e0;
 }
 
 .left-pane{
@@ -77,7 +83,7 @@ header h1 {
 
 /* ----------- Course items ----------------- */
 .progress-bar-success {
-    background-color: #91A886;
+    background-color: rgb(84, 116, 140);
 }
 
 .course-name{
@@ -86,6 +92,7 @@ header h1 {
 
 article h2 {
     margin-top: 0;
+    color: rgb(242, 108, 99);
 }
 
 
@@ -94,13 +101,15 @@ article h2 {
 .links {
     font-family: 'Architects Daughter', cursive;
     text-align: center;
+
 }
 
 .social {
    text-align: center;
     padding-bottom: 2rem;
     font-size: 4rem;
-    color: #d9d9d9;
+    font-family: 'Architects Daughter', cursive;
+
 }
 
 .social-list {
@@ -126,6 +135,21 @@ footer{
     padding-bottom: 3rem;
 }
 
+.links-header{
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Architects Daughter', cursive;
+    text-align: center;
+}
+
+.links a {
+    color: rgb(242, 108, 99);
+}
+
+.social a {
+    color: rgb(244, 153, 147);
+}
+
 /* -----------Modal window ----------------- */
 
 .modal-header{
@@ -135,7 +159,11 @@ footer{
 
 
 /* ----------- Media Queries ----------------- */
-@media screen and (max-width: 700px) {
+@media (max-width: 700px) {
+
+    .flexbox-container {
+        display: block;
+    }
 
     .left-pane,
     .right-pane {
@@ -159,4 +187,51 @@ footer{
         padding-right: 70px;
     }
 
+    .progress{
+        max-width: 200px;
+    }
+    header{
+        height: 185px;
+    }
+
+
 }
+
+/* ----------- fadeInBlock  ----------------- */
+.fadeInBlock {
+    opacity:0;
+}
+
+/* ----------- report-card ----------------- */
+.report-card{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 600px;
+    font-family: 'Architects Daughter', cursive;
+}
+
+.report-card-wrapper{
+    padding: 2rem 0;
+}
+
+.report-card-wrapper .badges li{
+    width: 7% !important;
+    margin: 7px;
+}
+
+.badges li img {
+    opacity: 0.7;
+}
+
+.report-card .badges {
+    margin: 10px 10px 0;
+}
+
+
+
+hr {
+    max-width: 800px;
+}
+
+
+
