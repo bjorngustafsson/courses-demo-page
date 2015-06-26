@@ -9,9 +9,6 @@ $(document).on('click', '.show-school-courses', function(e) {
     });
 });
 
-
-
-
 /*---------move course header pane to left on media query, use that min-width is changed on media query --------- */
 $(document).ready(function() {
     // run test on initial page load
@@ -27,20 +24,26 @@ $(document).ready(function() {
 
 //Function to the css rule
 function checkSize() {
+    console.log('min-width', $(".left-pane").css("min-width") );
+    //use that min-width is changed on media query, ugly fix for now
+    //IE and FF fix, since IE returns pixels instead of 100%, must use more argument in if conditions
+    if ($(".left-pane").css("min-width") == "100%" || !($(".left-pane").css("min-width") == "0px")) {
 
-    //use that min-width is changed on media query
-    if ($(".left-pane").css("min-width") == "100%") {
-        $(".even .right-pane").moveUp();
-
-        $('.fa-li').removeClass('fa-2x');
+        //ugly fix for FF
+        if  ( !($(".left-pane").css("min-width") == "-moz-min-content")){
+            console.log('moveup');
+            $(".even .right-pane").moveUp();
+            $('.fa-li').removeClass('fa-2x');
+        }
     }
 
     //reversed when making window larger
-    if ($(".left-pane").css("min-width") != "100%") {
+    if (($(".left-pane").css("min-width") != "100%" && ($(".left-pane").css("min-width") == "0px"))
+    || ($(".left-pane").css("min-width") == "-moz-min-content"))
+    {
         $(".even .right-pane").moveDown();
-
+        console.log('movedownelement');
         $('.fa-li').addClass('fa-2x');
-
     }
 
 }
@@ -59,6 +62,7 @@ $.fn.moveDown = function() {
 
 /*--------------- END ------------- */
 
+//Fade in any elements that has class fadeInBlock when they are visible
 function fadeBlocksIn() {
     $('.fadeInBlock').each(function(i) {
 

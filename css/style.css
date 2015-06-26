@@ -23,6 +23,7 @@ header {
     width:100%;
     text-align: center;
 
+    /*Align header center center */
     display: -webkit-flex;
     display:         flex;
     -webkit-align-items: center;
@@ -58,12 +59,14 @@ header h1 {
     padding: 4rem 2rem;
     flex:1;
     max-width: 400px;
+    flex-basis: auto;
 }
 
 .right-pane{
     padding: 4rem 2rem;
     flex:1;
     max-width: 400px;
+    flex-basis: auto;
 }
 
 .flexbox-container{
@@ -153,13 +156,13 @@ footer{
 /* -----------Modal window ----------------- */
 
 .modal-header{
-    background: #F3F2EE;
+    background: rgba(238, 150, 140, 0.66);
 }
 
 
 
 /* ----------- Media Queries ----------------- */
-@media (max-width: 700px) {
+@media (max-width: 820px) {
 
     .flexbox-container {
         display: block;
@@ -227,11 +230,23 @@ footer{
     margin: 10px 10px 0;
 }
 
-
-
+/* ----------- hr ----------------- */
 hr {
     max-width: 800px;
 }
+/* ----------- tinted overlay on header ----------------- */
+header:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(109, 136, 157, 0.47);
+}
 
+header{
+    position: relative;
 
-
+}
