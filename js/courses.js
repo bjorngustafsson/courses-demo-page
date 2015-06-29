@@ -1,4 +1,6 @@
 $(document).on('click', '.show-school-courses', function(e) {
+    $(".courses").dialog("open");
+    /*
     bootbox.dialog({
         title: "Universitetskurser",
         message: $('.courses').html(),
@@ -7,6 +9,7 @@ $(document).on('click', '.show-school-courses', function(e) {
         },
         backdrop: true
     });
+    */
 });
 
 /*---------move course header pane to left on media query, use that min-width is changed on media query --------- */
@@ -70,13 +73,13 @@ function fadeBlocksIn() {
         var bottom_of_window = $(window).scrollTop() + $(window).height();
 
         /* Adjust the "200" to either have a delay or that the content starts fading a bit before you reach it  */
-        bottom_of_window = bottom_of_window + 250;
+        bottom_of_window = bottom_of_window + 320;
 
         if (bottom_of_window > bottom_of_object) {
 
             $(this).animate({
                 'opacity': '1'
-            }, 900);
+            }, 1200);
 
         }
     });
@@ -89,3 +92,18 @@ $(function() {
         fadeBlocksIn();
     });
 });
+
+$(function () {
+    $(".courses" ).dialog({
+        width: 550,
+        autoOpen: false,
+        show: {
+            effect: "blind",
+            duration: 400
+        },
+        hide: {
+            effect: "blind",
+            duration: 400
+        }
+    });
+})
